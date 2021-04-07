@@ -136,6 +136,7 @@ end
     a. `size`: the size of the disk
     a. `type`: the type of disk. It can be either `qcow2` or `raw`
     a. `storage_domain`: the storage domain where the disk should be created
+  1. `ca_file` => Path to CA to be used to authenticate the engine. Get certificate with: `wget --output-document ca.crt 'http://engine.example.com/ovirt-engine/services/pki-resource?resource=ca-certificate&format=X509-PEM-CA'`
 
 
 ## Contributing

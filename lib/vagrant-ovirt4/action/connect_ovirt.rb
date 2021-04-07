@@ -17,6 +17,7 @@ module VagrantPlugins
 
           conn_attr = {}
           conn_attr[:url] = "#{config.url}"
+          conn_attr[:ca_file] = config.ca_file if config.ca_file
           conn_attr[:username] = config.username if config.username
           conn_attr[:password] = config.password if config.password
           conn_attr[:debug] = config.debug if config.debug

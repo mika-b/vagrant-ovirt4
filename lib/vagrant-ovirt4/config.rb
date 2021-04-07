@@ -7,6 +7,7 @@ module VagrantPlugins
     class Config < Vagrant.plugin('2', :config)
 
       attr_accessor :url
+      attr_accessor :ca_file
       attr_accessor :username
       attr_accessor :password
       attr_accessor :insecure
@@ -33,6 +34,7 @@ module VagrantPlugins
 
       def initialize
         @url               = UNSET_VALUE
+        @ca_file           = UNSET_VALUE
         @username          = UNSET_VALUE
         @password          = UNSET_VALUE
         @insecure          = UNSET_VALUE
@@ -87,6 +89,7 @@ module VagrantPlugins
 
       def finalize!
         @url = nil if @url == UNSET_VALUE
+        @ca_file = nil if @ca_file == UNSET_VALUE
         @username = nil if @username == UNSET_VALUE
         @password = nil if @password == UNSET_VALUE
         @insecure = false if @insecure == UNSET_VALUE
